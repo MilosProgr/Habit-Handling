@@ -1,0 +1,192 @@
+name: dockercompose8471507815431503700
+services:
+  devhabit.api:
+    build:
+      context: C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit
+      dockerfile: DevHabit.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      KEYCLOAK_AUDIENCE: myapi
+      KEYCLOAK_AUTHORITY: http://keycloak:8080/realms/myrealm
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://devhabit.aspire-dashboard:18889
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+    image: devhabitapi
+    networks:
+      app-network: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\acerPC\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\acerPC\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+  devhabit.aspire-dashboard:
+    environment:
+      DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: "true"
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:9.0
+    networks:
+      app-network: null
+    ports:
+      - mode: ingress
+        target: 18888
+        published: "18888"
+        protocol: tcp
+  devhabit.postgres:
+    environment:
+      POSTGRES_DB: devhabit
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:17.2
+    networks:
+      app-network: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit\.containers\postgres_data
+        target: /var/lib/postgresql/data
+        bind:
+          create_host_path: true
+  devhabit.seq:
+    environment:
+      ACCEPT_EULA: "Y"
+    image: datalust/seq:2024.3
+    networks:
+      app-network: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 5341
+        published: "5341"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit\.containers\seq_data
+        target: /data
+        bind:
+          create_host_path: true
+  jaeger:
+    container_name: Jaeger
+    image: jaegertracing/all-in-one:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 4317
+        published: "4317"
+        protocol: tcp
+      - mode: ingress
+        target: 4318
+        published: "4318"
+        protocol: tcp
+      - mode: ingress
+        target: 16686
+        published: "16686"
+        protocol: tcp
+  keycloak:
+    command:
+      - start-dev
+    container_name: Keycloak
+    environment:
+      KC_HEALTH_ENABLED: "true"
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    image: quay.io/keycloak/keycloak:latest
+    networks:
+      app-network: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "18080"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit\.containers\identity
+        target: /opt/keycloak/data
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:/Users/acerPC/Desktop/Milos/kursevi/praksa/Frontend/keycloakify-starter/dist_keycloak/keycloak-theme-for-kc-all-other-versions.jar
+        target: /opt/keycloak/providers/keycloak-theme.jar
+        bind:
+          create_host_path: true
+  nginx:
+    container_name: nginx
+    depends_on:
+      devhabit.api:
+        condition: service_started
+        required: true
+      keycloak:
+        condition: service_started
+        required: true
+    image: nginx:alpine
+    networks:
+      app-network: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "80"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:/Users/acerPC/Desktop/Milos/kursevi/praksa/DevHabit/nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit\react-client-app\dist
+        target: /usr/share/nginx/html
+        read_only: true
+        bind:
+          create_host_path: true
+  rabbitmq:
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_USER: guest
+    image: rabbitmq:3-management
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5672
+        published: "5672"
+        protocol: tcp
+      - mode: ingress
+        target: 15672
+        published: "15672"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit\.containers\rabbitmq_data
+        target: /var/lib/rabbitmq
+        bind:
+          create_host_path: true
+networks:
+  app-network:
+    name: dockercompose8471507815431503700_app-network
+    driver: bridge
+  default:
+    name: dockercompose8471507815431503700_default

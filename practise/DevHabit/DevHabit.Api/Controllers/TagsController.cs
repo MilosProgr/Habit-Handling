@@ -1,0 +1,139 @@
+﻿using Azure.Core;
+using DevHabit.Api.Database;
+using DevHabit.Api.DTOs.Habits;
+using DevHabit.Api.DTOs.Tags;
+using DevHabit.Api.Entities;
+using DevHabit.Api.Services;
+using FluentValidation;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+
+namespace DevHabit.Api.Controllers;
+
+[ResponseCache(Duration =120)]
+[Authorize]
+[ApiController]
+[Route("tags")]
+public sealed class TagsController(
+    ApplicationDbContext dbContext,
+    UserContext userContext) : ControllerBase
+{
+    [HttpGet]
+    public async Task<ActionResult<TagsCollectionDto>> GetTags()
+    {
+        string? userId = await userContext.GetUserIdAsync();
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return Unauthorized();
+        }
+        List<TagDto> tags = await dbContext
+            .Tags
+            .Select(TagQueries.ProjectToDto())
+            .ToListAsync();
+
+        var habitsCollectionDto = new TagsCollectionDto
+        {
+            Items = tags
+        };
+
+        return Ok(habitsCollectionDto);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TagDto>> GetTag(string id)
+    {
+        TagDto? tag = await dbContext
+            .Tags
+            .Where(h => h.Id == id)
+            .Select(TagQueries.ProjectToDto())
+            .FirstOrDefaultAsync();
+
+        if (tag is null)
+        {
+            return NotFound();
+        }
+
+        return Ok(tag);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<TagDto>> CreateTag(
+        CreateTagDto createTagDto,
+        IValidator<CreateTagDto> validator,
+        ProblemDetailsFactory problemDetailsFactory)
+    {
+        string? userId = await userContext.GetUserIdAsync();
+        if (string.IsNullOrWhiteSpace(userId))
+        {
+            return Unauthorized();
+        }
+        ValidationResult validationResult = await validator.ValidateAsync(createTagDto);
+
+        if (!validationResult.IsValid)
+        {
+            ProblemDetails problem = problemDetailsFactory.CreateProblemDetails(
+                HttpContext,
+                StatusCodes.Status400BadRequest);
+            problem.Extensions.Add("errors", validationResult.ToDictionary());
+            problem.Extensions.Add("sos_test", "Ovo je test da smo uspesno odradili error");
+
+            return BadRequest(problem);
+        }
+
+        Tag tag = createTagDto.ToEntity(userId);
+
+        if (await dbContext.Tags.AnyAsync(t => t.Name == tag.Name))
+        {
+            return Problem(
+                detail: $"The tag '{tag.Name}' already exists",
+                statusCode: StatusCodes.Status409Conflict);
+        }
+
+        dbContext.Tags.Add(tag);
+
+        await dbContext.SaveChangesAsync();
+
+        TagDto tagDto = tag.ToDto();
+
+        return CreatedAtAction(nameof(GetTag), new { id = tagDto.Id }, tagDto);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> UpdateTag(string id, UpdateTagDto updateTagDto)
+    {
+        Tag? tag = await dbContext.Tags.FirstOrDefaultAsync(h => h.Id == id);
+
+        if (tag is null)
+        {
+            return NotFound();
+        }
+
+        tag.UpdateFromDto(updateTagDto);
+
+        await dbContext.SaveChangesAsync();
+        var resourceUri = new Uri(Request.Path.Value!, UriKind.Relative);
+        InMemoryETagStore.SetETag(resourceUri, tag.ToDto());
+
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteTag(string id)
+    {
+        Tag? tag = await dbContext.Tags.FirstOrDefaultAsync(h => h.Id == id);
+
+        if (tag is null)
+        {
+            return NotFound();
+        }
+
+        dbContext.Tags.Remove(tag);
+
+        await dbContext.SaveChangesAsync();
+
+        return NoContent();
+    }
+}

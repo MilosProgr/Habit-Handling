@@ -1,0 +1,12 @@
+@basePath = api/users
+@userId = u_019718c8-a728-7a03-8f07-88983cb6244a
+
+### Get User by Id
+GET {{devHabitApiHostAddress}}/{{basePath}}/{{userId}}
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get Current User
+GET {{devHabitApiHostAddress}}/{{basePath}}/me
+Authorization: Bearer {{token}}
+Accept: application/json

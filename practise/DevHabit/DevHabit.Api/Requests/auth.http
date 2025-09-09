@@ -1,0 +1,32 @@
+@basePath = api/auth
+
+### Register a User
+POST {{devHabitApiHostAddress}}/{{basePath}}/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "TestUser",
+  "email": "test@mail.com",
+  "password": "Az123456!",
+  "confirmationPassword": "Az123456!",
+}
+
+### Login a User
+POST {{devHabitApiHostAddress}}/{{basePath}}/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "test@mail.com",
+  "password": "Az123456!",
+}
+
+### Refresh a User Tokens
+POST {{devHabitApiHostAddress}}/{{basePath}}/refresh
+Accept: application/json
+Content-Type: application/json
+
+{
+  "refreshToken": "",
+}

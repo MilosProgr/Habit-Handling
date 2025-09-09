@@ -1,0 +1,440 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit.FunctionalTests\\DevHabit.FunctionalTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit.FunctionalTests\\DevHabit.FunctionalTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit.FunctionalTests\\DevHabit.FunctionalTests.csproj",
+        "projectName": "DevHabit.FunctionalTests",
+        "projectPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit.FunctionalTests\\DevHabit.FunctionalTests.csproj",
+        "packagesPath": "C:\\Users\\acerPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit.FunctionalTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\acerPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit\\DevHabit.Api\\DevHabit.Api.csproj": {
+                "projectPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit\\DevHabit.Api\\DevHabit.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit\\DevHabit.Api\\DevHabit.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit\\DevHabit.Api\\DevHabit.Api.csproj",
+        "projectName": "DevHabit.Api",
+        "projectPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit\\DevHabit.Api\\DevHabit.Api.csproj",
+        "packagesPath": "C:\\Users\\acerPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit\\DevHabit.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\acerPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Asp.Versioning.Mvc": {
+              "target": "Package",
+              "version": "[8.1.0, )",
+              "versionCentrallyManaged": true
+            },
+            "AspNetCore.HealthChecks.NpgSql": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[15.0.1, )",
+              "versionCentrallyManaged": true
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.1.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )",
+              "versionCentrallyManaged": true
+            },
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[9.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Facet": {
+              "target": "Package",
+              "version": "[2.4.4, )",
+              "versionCentrallyManaged": true
+            },
+            "Facet.Extensions": {
+              "target": "Package",
+              "version": "[2.4.4, )",
+              "versionCentrallyManaged": true
+            },
+            "Facet.Extensions.EFCore": {
+              "target": "Package",
+              "version": "[2.4.4, )",
+              "versionCentrallyManaged": true
+            },
+            "Facet.Mapping": {
+              "target": "Package",
+              "version": "[2.4.4, )",
+              "versionCentrallyManaged": true
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.7, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.7, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[9.0.2, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[9.0.2, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.2, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.Http.Resilience": {
+              "target": "Package",
+              "version": "[9.7.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.Resilience": {
+              "target": "Package",
+              "version": "[9.7.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.IO.RecyclableMemoryStream": {
+              "target": "Package",
+              "version": "[3.0.1, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.22.1, )",
+              "versionCentrallyManaged": true
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )",
+              "versionCentrallyManaged": true
+            },
+            "Npgsql.OpenTelemetry": {
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.11.1, )",
+              "versionCentrallyManaged": true
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.11.1, )",
+              "versionCentrallyManaged": true
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.11.0, )",
+              "versionCentrallyManaged": true
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.11.0, )",
+              "versionCentrallyManaged": true
+            },
+            "OpenTelemetry.Instrumentation.Runtime": {
+              "target": "Package",
+              "version": "[1.11.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.15.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Quartz.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.15.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Quartz.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.15.0, )",
+              "versionCentrallyManaged": true
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.1.2, )",
+              "versionCentrallyManaged": true
+            },
+            "Refit.HttpClientFactory": {
+              "target": "Package",
+              "version": "[8.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Refit.Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.6.9, )",
+              "versionCentrallyManaged": true
+            },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.6.0.109712, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.6.0.2, )",
+              "versionCentrallyManaged": true
+            },
+            "Testcontainers.PostgreSql": {
+              "target": "Package",
+              "version": "[4.6.0, )",
+              "versionCentrallyManaged": true
+            },
+            "WireMock.Net": {
+              "target": "Package",
+              "version": "[1.11.2, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Asp.Versioning.Mvc": "8.1.0",
+            "Asp.Versioning.Mvc.ApiExplorer": "8.1.0",
+            "AspNetCore.HealthChecks.NpgSql": "9.0.0",
+            "AutoMapper": "15.0.1",
+            "Azure.Monitor.OpenTelemetry.AspNetCore": "1.2.0",
+            "coverlet.collector": "6.0.4",
+            "CsvHelper": "33.1.0",
+            "Dapper": "2.1.66",
+            "EFCore.NamingConventions": "9.0.0",
+            "Facet": "2.4.4",
+            "Facet.Extensions": "2.4.4",
+            "Facet.Extensions.EFCore": "2.4.4",
+            "Facet.Mapping": "2.4.4",
+            "FluentValidation.DependencyInjectionExtensions": "11.11.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.7",
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.7",
+            "Microsoft.AspNetCore.JsonPatch": "9.0.2",
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "9.0.2",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.2",
+            "Microsoft.AspNetCore.OpenApi": "9.0.2",
+            "Microsoft.EntityFrameworkCore.InMemory": "9.0.2",
+            "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.3",
+            "Microsoft.Extensions.Http.Resilience": "9.7.0",
+            "Microsoft.Extensions.Resilience": "9.7.0",
+            "Microsoft.IO.RecyclableMemoryStream": "3.0.1",
+            "Microsoft.NET.Test.Sdk": "17.13.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
+            "Npgsql.OpenTelemetry": "9.0.3",
+            "NSubstitute": "5.3.0",
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.11.1",
+            "OpenTelemetry.Extensions.Hosting": "1.11.1",
+            "OpenTelemetry.Instrumentation.AspNetCore": "1.11.0",
+            "OpenTelemetry.Instrumentation.Http": "1.11.0",
+            "OpenTelemetry.Instrumentation.Runtime": "1.11.0",
+            "Quartz": "3.15.0",
+            "Quartz.Extensions.DependencyInjection": "3.15.0",
+            "Quartz.Extensions.Hosting": "3.15.0",
+            "RabbitMQ.Client": "7.1.2",
+            "Refit.HttpClientFactory": "8.0.0",
+            "Refit.Newtonsoft.Json": "8.0.0",
+            "Scalar.AspNetCore": "2.6.9",
+            "SonarAnalyzer.CSharp": "10.6.0.109712",
+            "Swashbuckle.AspNetCore": "9.0.3",
+            "Swashbuckle.AspNetCore.SwaggerGen": "9.0.3",
+            "Swashbuckle.AspNetCore.SwaggerUI": "9.0.3",
+            "System.Linq.Dynamic.Core": "1.6.0.2",
+            "Testcontainers.PostgreSql": "4.6.0",
+            "WireMock.Net": "1.11.2",
+            "xunit": "2.9.3",
+            "xunit.runner.visualstudio": "3.0.2"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
