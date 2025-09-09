@@ -1,0 +1,16 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* možeš i svoje custom stilove ovde */
+/* body {
+    @apply bg-gray-100;
+}
+
+.samurai-image {
+    @apply border-4 border-red-500 hover:scale-105 transition-transform duration-300;
+} */
+
+/* .kcLabelClass {
+    border: 3px solid red;
+} */
