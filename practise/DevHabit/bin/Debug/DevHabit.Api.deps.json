@@ -9,6 +9,10 @@
       "DevHabit.Api/1.0.0": {
         "dependencies": {
           "Asp.Versioning.Mvc": "8.1.0",
+          "AspNetCore.HealthChecks.NpgSql": "9.0.0",
+          "AspNetCore.HealthChecks.UI": "9.0.0",
+          "AspNetCore.HealthChecks.UI.Client": "9.0.0",
+          "AspNetCore.HealthChecks.UI.InMemory.Storage": "9.0.0",
           "AutoMapper": "15.0.1",
           "CsvHelper": "33.1.0",
           "Dapper": "2.1.66",
@@ -93,6 +97,78 @@
           "lib/net8.0/Asp.Versioning.Mvc.dll": {
             "assemblyVersion": "8.1.0.0",
             "fileVersion": "8.1.8851.31627"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.NpgSql/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.11",
+          "Npgsql": "9.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.NpgSql.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI/9.0.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.UI.Data": "9.0.0",
+          "KubernetesClient": "15.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "9.0.3",
+          "Microsoft.Extensions.Http": "9.0.7"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.UI.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI.Client/9.0.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.UI.Core": "9.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.UI.Client.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI.Core/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.11"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.UI.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI.Data/9.0.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.UI.Core": "9.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.7"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.UI.Data.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.UI.InMemory.Storage/9.0.0": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.UI.Data": "9.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.11"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.UI.InMemory.Storage.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
           }
         }
       },
@@ -267,6 +343,14 @@
           "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.11.0.0"
+          }
+        }
+      },
+      "Fractions/7.3.0": {
+        "runtime": {
+          "lib/netstandard2.1/Fractions.dll": {
+            "assemblyVersion": "7.3.0.0",
+            "fileVersion": "7.3.0.0"
           }
         }
       },
@@ -961,6 +1045,26 @@
           }
         }
       },
+      "IdentityModel/5.2.0": {
+        "runtime": {
+          "lib/net5.0/IdentityModel.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "IdentityModel.OidcClient/5.2.1": {
+        "dependencies": {
+          "IdentityModel": "5.2.0",
+          "Microsoft.Extensions.Logging": "9.0.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.OidcClient.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.1.0"
+          }
+        }
+      },
       "JmesPath.Net/1.0.330": {
         "dependencies": {
           "JmesPath.Net.Parser": "1.0.330",
@@ -999,6 +1103,20 @@
           "lib/netstandard2.1/JsonConverter.Abstractions.dll": {
             "assemblyVersion": "0.7.0.0",
             "fileVersion": "0.7.0.0"
+          }
+        }
+      },
+      "KubernetesClient/15.0.1": {
+        "dependencies": {
+          "Fractions": "7.3.0",
+          "IdentityModel.OidcClient": "5.2.1",
+          "System.IdentityModel.Tokens.Jwt": "8.0.1",
+          "YamlDotNet": "16.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/KubernetesClient.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.1.62974"
           }
         }
       },
@@ -1507,6 +1625,17 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.11": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.7"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "8.0.11.0",
+            "fileVersion": "8.0.1124.52104"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/9.0.7": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.7",
@@ -1703,6 +1832,15 @@
           }
         }
       },
+      "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "8.0.11",
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
+          "Microsoft.Extensions.Options": "9.0.7"
+        }
+      },
+      "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.11": {},
       "Microsoft.Extensions.FileProviders.Abstractions/9.0.7": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.7"
@@ -3555,7 +3693,7 @@
           "System.Text.Json": "9.0.3",
           "System.Text.RegularExpressions": "4.3.1",
           "WireMock.Net.Abstractions": "1.11.2",
-          "YamlDotNet": "8.1.0"
+          "YamlDotNet": "16.0.0"
         },
         "runtime": {
           "lib/net8.0/WireMock.Net.OpenApiParser.dll": {
@@ -3631,11 +3769,11 @@
           }
         }
       },
-      "YamlDotNet/8.1.0": {
+      "YamlDotNet/16.0.0": {
         "runtime": {
-          "lib/netstandard2.1/YamlDotNet.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.1.0.0"
+          "lib/net8.0/YamlDotNet.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.0.0.0"
           }
         }
       }
@@ -3674,6 +3812,48 @@
       "sha512": "sha512-BMAJM2sGsTUw5FQ9upKQt6GFoldWksePgGpYjl56WSRvIuE3UxKZh0gAL+wDTIfLshUZm97VCVxlOGyrcjWz9Q==",
       "path": "asp.versioning.mvc/8.1.0",
       "hashPath": "asp.versioning.mvc.8.1.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.NpgSql/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-npc58/AD5zuVxERdhCl2Kb7WnL37mwX42SJcXIwvmEig0/dugOLg3SIwtfvvh3TnvTwR/sk5LYNkkPaBdks61A==",
+      "path": "aspnetcore.healthchecks.npgsql/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r/bGIiFDm/Bv+S/OCcE1/YzM4Zul1nEKGRA42xcGqxaYmaQf1T+gFEReNNA+5nHXuXt5TRuBuVag1emXuwqe6w==",
+      "path": "aspnetcore.healthchecks.ui/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.ui.9.0.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI.Client/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Ub3Wvvbz7CMuFNWgLEc9qqQibiMoovDML/WHrwr5J83RPgtI20giCR92s/ipLgu7IIuqw+W/y7WpIeHqAICxg==",
+      "path": "aspnetcore.healthchecks.ui.client/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.ui.client.9.0.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI.Core/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TVriy4hgYnhfqz6NAzv8qe62Q8wf82iKUL6WV9selqeFZTq1ILi39Sic6sFQegRysvAVcnxKP/vY8z9Fk8x6XQ==",
+      "path": "aspnetcore.healthchecks.ui.core/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.ui.core.9.0.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI.Data/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bZkXUdiqXOkmhe3XHF+OIgPQKR8OXS8/+iDWegmxSXtbaIYwsT5+B0URT+P4OPvhj5tR2goMMZe5KwJBVHr+1g==",
+      "path": "aspnetcore.healthchecks.ui.data/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.ui.data.9.0.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.UI.InMemory.Storage/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xuq+HBH8Ckz9r5d+yP1pk7cgIbPLBqCGfYu0MxtvbtsxIo7cv5nQoUCJsdgqN5/a4ndVUJZco6GjWFk6r4xN1w==",
+      "path": "aspnetcore.healthchecks.ui.inmemory.storage/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.ui.inmemory.storage.9.0.0.nupkg.sha512"
     },
     "AutoMapper/15.0.1": {
       "type": "package",
@@ -3786,6 +3966,13 @@
       "sha512": "sha512-viTKWaMbL3yJYgGI0DiCeavNbE9UPMWFVK2XS9nYXGbm3NDMd0/L5ER4wBzmTtW3BYh3SrlSXm9RACiKZ6stlA==",
       "path": "fluentvalidation.dependencyinjectionextensions/11.11.0",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512"
+    },
+    "Fractions/7.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2bETFWLBc8b7Ut2SVi+bxhGVwiSpknHYGBh2PADyGWONLkTxT7bKyDRhF8ao+XUv90tq8Fl7GTPxSI5bacIRJw==",
+      "path": "fractions/7.3.0",
+      "hashPath": "fractions.7.3.0.nupkg.sha512"
     },
     "GraphQL/8.2.1": {
       "type": "package",
@@ -4228,6 +4415,20 @@
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
     },
+    "IdentityModel/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nuhkbaDH9l5QzNJp2MtP3qio57MPtiRneUN8Ocr7od0JvSYaIe3gBj/vxllr11S/Qvu1AG4GZXoyv5469ewYDA==",
+      "path": "identitymodel/5.2.0",
+      "hashPath": "identitymodel.5.2.0.nupkg.sha512"
+    },
+    "IdentityModel.OidcClient/5.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OuPhDNAw/EoJVEmYO6/ChZUBcug4OGoGKTKLUyBCsGhlKegxJk25LYQ0EL7GCBMgkEL+BYNJukNZyaJ+JNaWog==",
+      "path": "identitymodel.oidcclient/5.2.1",
+      "hashPath": "identitymodel.oidcclient.5.2.1.nupkg.sha512"
+    },
     "JmesPath.Net/1.0.330": {
       "type": "package",
       "serviceable": true,
@@ -4248,6 +4449,13 @@
       "sha512": "sha512-PfDwSKmStUbl8aD6bCKL9tQG4s+EoyCM9lFHVAMyOd3qcb0aDejthswlcQSS/I9FHpOJbAZ9ru3m7gQcexjVKA==",
       "path": "jsonconverter.abstractions/0.7.0",
       "hashPath": "jsonconverter.abstractions.0.7.0.nupkg.sha512"
+    },
+    "KubernetesClient/15.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IOsMJaBpiHELr7ZeiJQypdtLDbc/HqxbEh9UMaDvLpBvGIzS+KhjA0LJVEbGgvubmhWHxLPfgHAL0le1zr2RwA==",
+      "path": "kubernetesclient/15.0.1",
+      "hashPath": "kubernetesclient.15.0.1.nupkg.sha512"
     },
     "MetadataReferenceService.Abstractions/0.0.1": {
       "type": "package",
@@ -4424,6 +4632,13 @@
       "path": "microsoft.entityframeworkcore.design/9.0.3",
       "hashPath": "microsoft.entityframeworkcore.design.9.0.3.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gFFdubZlRfudSw94OxO7s8OvLQZncnR0S1ll//wRtZP3mMYVeq8DrMnEILK6hBJwbTBB1SNm3apg9SdvdE/ySg==",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.11",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.8.0.11.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/9.0.7": {
       "type": "package",
       "serviceable": true,
@@ -4549,6 +4764,20 @@
       "sha512": "sha512-wRdQuf/818X9ujg59fCaxMq2NGOqf8eFZJ4tBdGvwkLgv9vCwK+3blX/aNe7Ds4GHy+buB+HNMtSRv8xe9890Q==",
       "path": "microsoft.extensions.diagnostics.exceptionsummarization/9.7.0",
       "hashPath": "microsoft.extensions.diagnostics.exceptionsummarization.9.7.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zLgN22Zp9pk8RHlwssRTexw4+a6wqOnKWN+VejdPn5Yhjql4XiBhkFo35Nu8mmqHIk/UEmmCnMGLWq75aFfkOw==",
+      "path": "microsoft.extensions.diagnostics.healthchecks/8.0.11",
+      "hashPath": "microsoft.extensions.diagnostics.healthchecks.8.0.11.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-So3JUdRxozRjvQ3cxU6F3nI/i4emDnjane6yMYcJhvTTTu29ltlIdoXjkFGRceIWz8yKvuEpzXItZ0x5GvN2nQ==",
+      "path": "microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.11",
+      "hashPath": "microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.FileProviders.Abstractions/9.0.7": {
       "type": "package",
@@ -5929,12 +6158,12 @@
       "path": "xpath2.extensions/1.1.5",
       "hashPath": "xpath2.extensions.1.1.5.nupkg.sha512"
     },
-    "YamlDotNet/8.1.0": {
+    "YamlDotNet/16.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-U8UtsQJ7s6sHwt/4G7q6af0CuMzjPQcuS7/KuxqoLdDdMzwBilPldI0T3pUVwWYqrWfd3veokCrDyrGH/0tWAQ==",
-      "path": "yamldotnet/8.1.0",
-      "hashPath": "yamldotnet.8.1.0.nupkg.sha512"
+      "sha512": "sha512-kZ4jR5ltFhnjaUqK9x81zXRIUTH4PTXTTEmJDNQdkDLQhcv+2Nl19r0dCSvPW1mstOYBfXTnjdieRbUO6gHMDw==",
+      "path": "yamldotnet/16.0.0",
+      "hashPath": "yamldotnet.16.0.0.nupkg.sha512"
     }
   }
 }

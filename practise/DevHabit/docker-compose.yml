@@ -16,6 +16,7 @@ services:
       # Keycloak URL za JWT validaciju
       - KEYCLOAK_AUTHORITY=http://keycloak:8080/realms/myrealm
       - KEYCLOAK_AUDIENCE=myapi
+      - DOTNET_RUNNING_IN_CONTAINER=true
     networks:
       - app-network
 
@@ -63,7 +64,7 @@ services:
       - KEYCLOAK_ADMIN_PASSWORD=admin
     volumes:
       - ./.containers/identity:/opt/keycloak/data
-      - C:/Users/acerPC/Desktop/Milos/kursevi/praksa/Frontend/keycloakify-starter/dist_keycloak/keycloak-theme-for-kc-all-other-versions.jar:/opt/keycloak/providers/keycloak-theme.jar
+      - C:/Users/acerPC/Desktop/Milos/kursevi/Habit-Handling/practise/Frontend/keycloakify-starter/dist_keycloak/keycloak-theme-for-kc-all-other-versions.jar:/opt/keycloak/providers/keycloak-theme.jar
     ports:
       - 18080:8080
     networks:
@@ -75,8 +76,8 @@ services:
       - "8085:80"    # javni ulaz
       #- "443:443" # za TLS, opcionalno
     volumes:
-      - C:/Users/acerPC/Desktop/Milos/kursevi/praksa/DevHabit/nginx.conf:/etc/nginx/nginx.conf:ro
-      - C:/Users/acerPC/Desktop/Milos/kursevi/praksa/react-client-app/dist:/usr/share/nginx/html:ro
+      - C:/Users/acerPC/Desktop/Milos/kursevi/Habit-Handling/practise/DevHabit/nginx.conf:/etc/nginx/nginx.conf:ro
+      - C:/Users/acerPC/Desktop/Milos/kursevi/Habit-Handling/practise/react-client-app/dist:/usr/share/nginx/html:ro
     depends_on:
       - devhabit.api
       - keycloak

@@ -1,14 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "mhXREQnT8k0=",
+  "dgSpecHash": "BkiHbRLFtIs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\praksa\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+  "projectFilePath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acerPC\\.nuget\\packages\\anyof\\0.4.0\\anyof.0.4.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\asp.versioning.mvc\\8.1.0\\asp.versioning.mvc.8.1.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\aspnetcore.healthchecks.npgsql\\9.0.0\\aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\aspnetcore.healthchecks.ui\\9.0.0\\aspnetcore.healthchecks.ui.9.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\9.0.0\\aspnetcore.healthchecks.ui.client.9.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\aspnetcore.healthchecks.ui.core\\9.0.0\\aspnetcore.healthchecks.ui.core.9.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\aspnetcore.healthchecks.ui.data\\9.0.0\\aspnetcore.healthchecks.ui.data.9.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\aspnetcore.healthchecks.ui.inmemory.storage\\9.0.0\\aspnetcore.healthchecks.ui.inmemory.storage.9.0.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -26,6 +31,7 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\fare\\2.2.1\\fare.2.2.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\fractions\\7.3.0\\fractions.7.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\graphql\\8.2.1\\graphql.8.2.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\graphql-parser\\9.5.0\\graphql-parser.9.5.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\graphql.analyzers\\8.2.1\\graphql.analyzers.8.2.1.nupkg.sha512",
@@ -89,9 +95,12 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\identitymodel\\5.2.0\\identitymodel.5.2.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\identitymodel.oidcclient\\5.2.1\\identitymodel.oidcclient.5.2.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\jmespath.net\\1.0.330\\jmespath.net.1.0.330.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\jmespath.net.parser\\1.0.330\\jmespath.net.parser.1.0.330.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\jsonconverter.abstractions\\0.7.0\\jsonconverter.abstractions.0.7.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\kubernetesclient\\15.0.1\\kubernetesclient.15.0.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\metadatareferenceservice.abstractions\\0.0.1\\metadatareferenceservice.abstractions.0.0.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\metadatareferenceservice.default\\0.0.1\\metadatareferenceservice.default.0.0.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.7\\microsoft.aspnetcore.authentication.jwtbearer.9.0.7.nupkg.sha512",
@@ -103,10 +112,12 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\9.0.8\\microsoft.aspnetcore.mvc.testing.9.0.8.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.aspnetcore.testhost\\9.0.8\\microsoft.aspnetcore.testhost.9.0.8.nupkg.sha512",
-    "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.codeanalysis.common\\4.8.0\\microsoft.codeanalysis.common.4.8.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.8.0\\microsoft.codeanalysis.csharp.4.8.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\4.5.0\\microsoft.codeanalysis.csharp.workspaces.4.5.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.5.0\\microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.6\\microsoft.data.sqlclient.5.1.6.nupkg.sha512",
@@ -114,6 +125,7 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.8\\microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.8\\microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.11\\microsoft.entityframeworkcore.design.8.0.11.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\9.0.8\\microsoft.entityframeworkcore.inmemory.9.0.8.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.7\\microsoft.entityframeworkcore.relational.9.0.7.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.3\\microsoft.entityframeworkcore.sqlserver.9.0.3.nupkg.sha512",
@@ -182,6 +194,7 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.22.1\\microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\namotion.reflection\\2.0.10\\namotion.reflection.2.0.10.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
@@ -247,9 +260,16 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.composition.attributedmodel\\6.0.0\\system.composition.attributedmodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.composition.convention\\6.0.0\\system.composition.convention.6.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.composition.hosting\\6.0.0\\system.composition.hosting.6.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.composition.runtime\\6.0.0\\system.composition.runtime.6.0.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.composition.typedparts\\6.0.0\\system.composition.typedparts.6.0.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
@@ -314,6 +334,7 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\system.text.json\\9.0.3\\system.text.json.9.0.3.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.text.regularexpressions\\4.3.1\\system.text.regularexpressions.4.3.1.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\acerPC\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
@@ -345,7 +366,44 @@
     "C:\\Users\\acerPC\\.nuget\\packages\\xunit.extensibility.core\\2.9.2\\xunit.extensibility.core.2.9.2.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "C:\\Users\\acerPC\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512",
-    "C:\\Users\\acerPC\\.nuget\\packages\\yamldotnet\\8.1.0\\yamldotnet.8.1.0.nupkg.sha512"
+    "C:\\Users\\acerPC\\.nuget\\packages\\yamldotnet\\16.0.0\\yamldotnet.16.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.5.0 requires Microsoft.CodeAnalysis.Common (= 4.5.0) but version Microsoft.CodeAnalysis.Common 4.8.0 was resolved.",
+      "projectPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Common",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Workspaces 4.5.0 requires Microsoft.CodeAnalysis.CSharp (= 4.5.0) but version Microsoft.CodeAnalysis.CSharp 4.8.0 was resolved.",
+      "projectPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.Workspaces.Common 4.5.0 requires Microsoft.CodeAnalysis.Common (= 4.5.0) but version Microsoft.CodeAnalysis.Common 4.8.0 was resolved.",
+      "projectPath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\acerPC\\Desktop\\Milos\\kursevi\\Habit-Handling\\practise\\DevHabit.IntegrationTests\\DevHabit.IntegrationTests.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Common",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

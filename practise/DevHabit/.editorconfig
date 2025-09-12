@@ -447,3 +447,4 @@ dotnet_style_coalesce_expression = true:none
 dotnet_style_null_propagation = true:error
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:error
 dotnet_style_prefer_auto_properties = true:warning
+dotnet_style_object_initializer = true:error

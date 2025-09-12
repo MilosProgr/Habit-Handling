@@ -16,7 +16,9 @@ builder
     .AddApplicationServices()
     .AddAuthenticationServices()
     .AddCorsPolicy()
+    .AddHealthChecks()
     .AddRateLimiting();
+    
 
 WebApplication app = builder.Build();
 
@@ -42,8 +44,10 @@ if (app.Environment.IsDevelopment())
 
         options.OAuth2RedirectUrl("http://localhost:5000/swagger/oauth2-redirect.html");
 
-        Console.WriteLine("Radi bre vec jednom");
     });
+
+    app.MapHealthChecks("/health"); // <-- This exposes the health check endpoint
+    app.MapHealthChecksUI();
     //app.UseSwaggerUI();
 
     await app.ApplyMigrationsAsync();

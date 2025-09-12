@@ -18,7 +18,9 @@ using DevHabit.Api.Middleware;
 using DevHabit.Api.Services;
 using DevHabit.Api.Services.GitHub;
 using DevHabit.Api.Services.Habit;
-
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 //using DevHabit.Api.Settings;
 using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -39,6 +41,7 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using Quartz;
 using Refit;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace DevHabit.Api;
@@ -381,6 +384,31 @@ public static class DependencyInjection
         return builder;
     }
 
+
+
+    public static WebApplicationBuilder AddHealthChecks(this WebApplicationBuilder builder)
+    {
+        var connString = builder.Configuration.GetConnectionString("Database")
+                         ?? throw new InvalidOperationException("Database connection string is not configured.");
+
+        // Health checks
+        builder.Services.AddHealthChecks()
+               .AddNpgSql(connString, name: "Postgres")
+               .AddCheck("self", () => HealthCheckResult.Healthy());
+
+        // UI for health checks
+        builder.Services.AddHealthChecksUI(setup =>
+        {
+            var isDocker = Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true";
+            var healthUrl = isDocker ? "http://localhost:8080/health" : "http://localhost:5000/health";
+            setup.AddHealthCheckEndpoint("DevHabit API", healthUrl);
+        })
+        .AddInMemoryStorage();
+
+        return builder;
+    }
+
+
     public static WebApplicationBuilder AddCorsPolicy(this WebApplicationBuilder builder)
     {
         //CorsOptions corsOptions = builder.Configuration
@@ -408,6 +436,8 @@ public static class DependencyInjection
 
         return builder;
     }
+
+    
 
     public static WebApplicationBuilder AddRateLimiting(this WebApplicationBuilder builder)
     {

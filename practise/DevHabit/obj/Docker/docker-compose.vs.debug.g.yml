@@ -14,8 +14,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
     volumes:
-      - C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit\DevHabit.Api:/app:rw
-      - C:\Users\acerPC\Desktop\Milos\kursevi\praksa\DevHabit:/src:rw
+      - C:\Users\acerPC\Desktop\Milos\kursevi\Habit-Handling\practise\DevHabit\DevHabit.Api:/app:rw
+      - C:\Users\acerPC\Desktop\Milos\kursevi\Habit-Handling\practise\DevHabit:/src:rw
       - C:\Users\acerPC\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\acerPC\.nuget\packages:/.nuget/packages:ro
       - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/.nuget/fallbackpackages:ro
