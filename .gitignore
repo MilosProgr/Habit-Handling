@@ -416,3 +416,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Ignoriši DDL i DOL fajlove
+*.DDL
+*.DOL
+*.fsm
+*.vm
+*.containers
