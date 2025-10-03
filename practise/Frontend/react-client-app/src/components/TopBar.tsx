@@ -3,6 +3,7 @@ import { FaBell } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import avatar from "../assets/react.svg";
 import { useNavigate } from "react-router-dom";
+import keycloak from "../keycloak";
 
 
 const Chevron = FiChevronDown as React.FC<{ size?: number; className?: string }>;
@@ -97,5 +98,5 @@ const TopBar = () => {
 export default TopBar;
 
 function doLogout() {
-    throw new Error("Function not implemented.");
+    keycloak.logout();
 }

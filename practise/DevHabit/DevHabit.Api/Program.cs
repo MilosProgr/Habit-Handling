@@ -62,6 +62,8 @@ app.UseExceptionHandler();
 
 app.UseCors(CorsOptions.PolicyName);
 
+
+
 app.UseResponseCaching();
 
 app.UseAuthentication();
