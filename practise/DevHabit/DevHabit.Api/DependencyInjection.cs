@@ -246,6 +246,7 @@ public static class DependencyInjection
 
         builder.Services.AddSingleton<ICacheService, PostgresCacheService>();
 
+        builder.Services.AddScoped<PostgresAdvisoryLockService>();
 
         return builder;
     }

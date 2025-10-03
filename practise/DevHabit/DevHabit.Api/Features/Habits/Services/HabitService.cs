@@ -20,10 +20,13 @@ namespace DevHabit.Api.Features.Habits.Services;
 public sealed class HabitService : CrudServiceBase<Habit, HabitDto, HabitWithTagsDto, CreateHabitDto, UpdateHabitDto, HabitsQueryParameters>,IHabitService
 
 {
+
     public readonly ICacheService _cacheService;
-    public HabitService(ApplicationDbContext db, LinkService linkService, ICacheService cacheService) : base(db, linkService)
+    private readonly PostgresAdvisoryLockService _lockService;
+    public HabitService(ApplicationDbContext db, LinkService linkService, ICacheService cacheService, PostgresAdvisoryLockService lockService) : base(db, linkService)
     {
         _cacheService = cacheService;
+        _lockService = lockService;
     }
 
     public override ICollection<LinkDto> GetItemLinks(string id, string? fields = null) =>
@@ -148,23 +151,35 @@ public sealed class HabitService : CrudServiceBase<Habit, HabitDto, HabitWithTag
 
     public override async Task<HabitDto?> UpdateAsync(string id, UpdateHabitDto dto)
     {
-        var habit = await _db.Habits.FirstOrDefaultAsync(h => h.Id == id);
-        if (habit is null)
+        await _lockService.AcquireLockAsync(id); // uzmi distributed lock
+        try
         {
+            var habit = await _db.Habits.FirstOrDefaultAsync(h => h.Id == id);
 
-            return null;
+            if (habit is null)
+            {
+                return null;
+            }
+
+            habit.UpdateFromDto(dto);
+            await _db.SaveChangesAsync();
+
+            var habitCacheKey = $"habit:{habit.UserId}:{id}:*"; // wildcard za fields
+            await _cacheService.RemoveByPrefixAsync(habitCacheKey);
+
+            // Obriši keš liste za tog korisnika
+            var listCachePrefix = $"habits:{habit.UserId}:";
+            await _cacheService.RemoveByPrefixAsync(listCachePrefix);
+
+            return habit.ToDto();
         }
-
-        habit.UpdateFromDto(dto);
-        await _db.SaveChangesAsync();
-        var habitCacheKey = $"habit:{habit.UserId}:{id}:*"; // wildcard za fields
-        await _cacheService.RemoveByPrefixAsync(habitCacheKey);
-
-        // Obriši keš liste za tog korisnika
-        var listCachePrefix = $"habits:{habit.UserId}:";
-        await _cacheService.RemoveByPrefixAsync(listCachePrefix);
-        return habit.ToDto();
+        finally
+        {
+            // OBAVEZNO oslobodi lock
+            await _lockService.ReleaseLockAsync(id);
+        }
     }
+
 
     public override async Task<bool> DeleteAsync(string id)
     {

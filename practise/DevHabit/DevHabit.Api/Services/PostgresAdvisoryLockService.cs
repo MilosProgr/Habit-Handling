@@ -36,4 +36,15 @@ public class PostgresAdvisoryLockService
 
     private static long HashKey(string key) =>
         BitConverter.ToInt64(SHA256.HashData(Encoding.UTF8.GetBytes(key)), 0);
+    public async Task AcquireLockAsync(string key, CancellationToken cancellationToken = default)
+    {
+        await using var connection = await _dataSource.OpenConnectionAsync(cancellationToken);
+
+        var lockKey = HashKey(key);
+
+        // This will block until the lock is available
+        await connection.ExecuteAsync(
+            "SELECT pg_advisory_lock(@key)", new { key = lockKey });
+    }
+
 }
