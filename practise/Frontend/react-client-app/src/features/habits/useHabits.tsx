@@ -23,7 +23,7 @@ export function useHabits(pageSize = 6) {
 
         try {
             const result = await getResource(
-                `/habits?page_size=${pageSize}&fields=id,name,description,target,frequency,endDate,milestone`,
+                `/api/habits?page_size=${pageSize}&fields=id,name,description,target,frequency,endDate,milestone`,
                 "application/vnd.dev-habit.hateoas+json"
             );
 
@@ -53,7 +53,7 @@ export function useHabits(pageSize = 6) {
             if (!token) return null;
             setIsLoading(true);
             try {
-                const created = await addResource("/habits", newHabit);
+                const created = await addResource("/api/habits", newHabit);
                 const habitToAdd: Habit =
                     "data" in created!
                         ? (Array.isArray(created.data) ? created.data[0] : created.data) // uzmi prvi ako je array
@@ -78,7 +78,7 @@ export function useHabits(pageSize = 6) {
             if (!token) return false;
             setIsLoading(true);
             try {
-                const success = await deleteResource(`/habits/${habitId}`);
+                const success = await deleteResource(`/api/habits/${habitId}`);
                 if (success) setHabits((prev) => prev.filter((h) => h.id !== habitId));
                 return success;
             } catch (err) {
