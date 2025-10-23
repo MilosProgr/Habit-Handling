@@ -34,12 +34,7 @@ public sealed class HabitsController : ControllerBase
     {
         _habitService = habitService;
     }
-    //private readonly IHabitService _habitService;
-
-    //public HabitsController(IHabitService habitService)
-    //{
-    //    _habitService = habitService;
-    //}
+    
 
     [HttpGet]
     [EndpointSummary("Get all habits")]
