@@ -24,6 +24,8 @@ namespace DevHabit.Api.Features.Habits.Controller;
 [ApiVersion(1.0)]
 [Produces(MediaTypeNames.Application.Json, CustomMediaTypeNames.Application.HateoasJson)]
 [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+[ResponseCache(Duration = 120)]
+
 public sealed class HabitsController : ControllerBase
 {
     private readonly IHabitService _habitService;

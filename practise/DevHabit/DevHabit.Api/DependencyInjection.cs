@@ -41,6 +41,7 @@ using Quartz;
 using Refit;
 using Microsoft.Extensions.DependencyInjection;
 using DevHabit.Api.Features.Habits.Services;
+using DevHabit.Api.Features.Tags.Services;
 
 
 namespace DevHabit.Api;
@@ -238,6 +239,8 @@ public static class DependencyInjection
 
         builder.Services.AddScoped<IHabitService,HabitService>();
 
+        builder.Services.AddScoped<ITagService, TagService>();
+
         builder.Services.AddSingleton<NpgsqlDataSource>(sp =>
         {
             var connStr = builder.Configuration.GetConnectionString("Database");
@@ -400,7 +403,7 @@ public static class DependencyInjection
         builder.Services.AddHealthChecksUI(setup =>
         {
             var isDocker = Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true";
-            var healthUrl = isDocker ? "http://localhost:8080/health" : "http://localhost:5000/health";
+            var healthUrl = isDocker ? "http://localhost:53676/health" : "http://localhost:5000/health";
             setup.AddHealthCheckEndpoint("DevHabit API", healthUrl);
         })
         .AddInMemoryStorage();

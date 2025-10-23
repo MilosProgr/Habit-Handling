@@ -1,4 +1,5 @@
-﻿using DevHabit.Api.Features.Tags.DTO;
+﻿using DevHabit.Api.Common.Sorting;
+using DevHabit.Api.Features.Tags.DTO;
 using DevHabit.Api.Features.Tags.Entities;
 using DevHabit.Api.Features.Tags.Operations;
 
@@ -6,6 +7,16 @@ namespace DevHabit.Api.Features.Tags.Mappings;
 
 internal static class TagMappings
 {
+    public static readonly SortMappingDefinition<TagDto, Tag> SortMapping = new()
+    {
+        Mappings =
+        [
+            new SortMapping(nameof(TagDto.Name), nameof(Tag.Name)),
+            new SortMapping(nameof(TagDto.Description), nameof(Tag.Description)),
+            new SortMapping(nameof(TagDto.CreatedAtUtc), nameof(Tag.CreatedAtUtc)),
+            new SortMapping(nameof(TagDto.UpdatedAtUtc), nameof(Tag.UpdatedAtUtc))
+        ]
+    };
     public static TagDto ToDto(this Tag tag)
     {
         return new TagDto

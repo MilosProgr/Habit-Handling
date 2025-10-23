@@ -19,7 +19,8 @@ public interface ICrudService<TEntityDto, TWithTagsDto, TCreateDto, TUpdateDto, 
         string? acceptHeader,
         CancellationToken cancellationToken);
 
-    Task<TEntityDto> CreateAsync(TCreateDto dto, string userId);
+    Task<TEntityDto> CreateAsync(TCreateDto dto, string userId)
+        => throw new NotSupportedException("Create operation is not supported.");
 
     Task<TEntityDto?> UpdateAsync(string id, TUpdateDto dto);
 

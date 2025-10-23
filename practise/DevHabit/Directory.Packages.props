@@ -49,6 +49,7 @@
     <PackageVersion Include="Refit.Newtonsoft.Json" Version="8.0.0" />
     <PackageVersion Include="Scalar.AspNetCore" Version="2.6.9" />
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.6.0.109712" />
+    <PackageVersion Include="Steeltoe.Discovery.ClientCore" Version="4.0.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="9.0.3" />
     <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.3" />
     <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.3" />
