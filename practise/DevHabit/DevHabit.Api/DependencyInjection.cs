@@ -278,11 +278,14 @@ public static class DependencyInjection
                 //    ValidAudience = jwtAuthOptions.Audience,
                 //    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtAuthOptions.Key))
                 //};
-                options.RequireHttpsMetadata = false; // true u produkciji!
+                options.RequireHttpsMetadata = true; // true u produkciji!
                 options.Authority = builder.Configuration["Authentication:Authority"];
                 options.Audience = builder.Configuration["Authentication:Audience"];
                 options.MetadataAddress = builder.Configuration["Authentication:MetadataAddress"]!;
+                options.SaveToken = true;
+
                 options.TokenValidationParameters = new TokenValidationParameters
+
                 {
                     ValidateIssuer = true,
                     ValidIssuer = builder.Configuration["Authentication:ValidIssuer"],
